@@ -1,12 +1,12 @@
 {-# LANGUAGE DataKinds, GADTs, KindSignatures, StandaloneDeriving #-}
-module Text.GentleMark.Term ( Term(..), Type(..) ) where
+module Text.GentleMark.Term ( Type(..), Term(..), tagName, tagOptions, tagBody ) where
 
 data Type = Toplevel | Textual
 
 data Term :: Type -> * where
   
   Text       :: String -> Term Textual
-                        
+
   Bold       :: [Term Textual] -> Term Textual
   Italic     :: [Term Textual] -> Term Textual
   Underlined :: [Term Textual] -> Term Textual
@@ -28,3 +28,15 @@ data Term :: Type -> * where
 deriving instance Eq   (Term t)
 deriving instance Ord  (Term t)
 deriving instance Show (Term t)
+
+tagName :: Term Textual -> String
+tagName (Tag name _ _) = name
+tagName _              = error "Not a Tag-Term!"
+
+tagOptions :: Term Textual -> [String]
+tagOptions (Tag _ options _) = options
+tagOptions _                 = error "Not a Tag-Term!"
+
+tagBody :: Term Textual -> String
+tagBody (Tag _ _ body) = body
+tagBody _              = error "Not a Tag-Term!"
