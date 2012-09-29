@@ -1,5 +1,5 @@
 {-# LANGUAGE DataKinds, FlexibleContexts #-}
-module Text.GentleMark ( Term(..), parse ) where
+module Text.GentleMark ( Term(..), Type(..), parse ) where
 
 import Text.GentleMark.Term
 import Text.GentleMark.Parsec
