@@ -75,6 +75,7 @@ library
   other-extensions:
     FlexibleContexts
     GADTs
+    ConstraintKinds
     KindSignatures
     StandaloneDeriving
   ghc-options: -Wall -fwarn-tabs -O2
