@@ -6,25 +6,25 @@ This is a gentle markup language, designed to fit forum-like systems.
 
 -   Styles:
     
-        \*\*Bold\*\*
+        **Bold**
         ~~Italic~~
         __Underlined__  
         !!Striked!!
         %%Spoiler%%
-        \`\`Monospace\`\`
+        ``Monospace``
         $$Latex$$
 
 -   Accents:
 
-        /(Quote)/     > I think I can safely say that nobody understands quantum mechanics.
-        /(Reference)/ >>19991
-        /(Hyperlink)/ http:.., https:.., ftp:.., mailto:.., news:.., irc:..
+        (Quote)     > I think I can safely say that nobody understands quantum mechanics.
+        (Reference) >>19991
+        (Hyperlink) http:.., https:.., ftp:.., mailto:.., news:.., irc:..
 
 -   Unordered lists:
 
-        \- Monad axioms:
-        \- Kleisli composition forms
-        \- a Category
+        - Monad axioms:
+        - Kleisli composition forms
+        - a Category
 
 -   Ordered lists:
 
